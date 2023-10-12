@@ -1,0 +1,735 @@
+$couleurgrise : #d5d4d4;
+$couleurprincipal : #ff5a5f;
+$policeheader: 1.5rem;
+$font :  'Dancing Script', cursive;
+
+
+@mixin display-just-center () {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin image () {
+    text-align: center;
+}
+
+@mixin carrousel () {
+    display: flex;
+    position: relative;
+    border-radius: 10px;
+    margin-left: 20em;
+}
+
+@mixin carrousel1() {
+    position: absolute;
+    left: 10em;
+    width:10em;
+    height: 10em;
+    pointer-events: none;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin ccarrousel2() {
+    display: block;
+    position: relative;
+    top: calc(50% - 4rem);
+    height: 2rem;
+    width:  2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    font-size: .9rem;
+    background-color: lighten(#dfd8d8b9, 35%);
+    border-radius: 100px;
+    box-shadow: 0 2px 0 0 rgba(black, .1);
+    transform: scale(.9);
+    transition: transform .2s;
+
+}
+
+body {
+    margin: 0;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $font;
+    border: solid $couleurgrise 2px;
+    height: 8em;
+
+&-logo {
+    display: flex;
+    width: 5em;
+    height: 2.5em;
+    margin-left: 7em;
+    }
+
+&-nav {
+    display: flex;
+    border: solid $couleurgrise 2px;
+    border-radius: 10em;
+    width: 28em;
+    height: 3em;
+
+
+}
+&-nav1 {
+    @include display-just-center();
+    border-right: solid $couleurgrise 2px;
+    width: 7em;
+}
+
+&-nav2 {
+    @include display-just-center();
+    width: 11em;
+    color: $couleurgrise;
+}
+
+&-nav3 {
+    display: flex;
+    align-items: center;
+    background-color: $couleurprincipal;
+    border-radius: 22em;
+    padding: 1em;
+}
+
+&-mmlsa {
+    display: flex;
+    align-items: center;
+    font-size: $policeheader;
+    margin-left: 3em;
+
+}
+
+&-mmlsa2 {
+    margin-left: 1em;
+}
+
+.header-mlsa:hover {
+    background-color: #ff5a60c1;
+    box-shadow: 2px 5px 5px rgb(0, 0, 0);
+    cursor: grab;
+    border-radius: 10em;
+}
+
+.header-mmlsa2:hover {
+    font-size: 1.5em;
+    cursor: grab;
+}
+
+.header-nav3:hover {
+    cursor: grab;
+    box-shadow: 2px 5px 5px rgb(0, 0, 0);
+}
+
+.header-nav1, .header-nav2:hover {
+    cursor: grab;
+}
+
+//-----------------------------------------Boutton-profil-------------------------------------------------
+
+&-profil {
+    display: flex;
+    border: solid $couleurgrise 2px;
+    border-radius: 29px;
+    width: 5em;
+    height: 3em;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 2em;
+}
+
+&-profil2 {
+    border-bottom: solid black 1px;
+    width: 1em;
+    margin-top: 0.4em;
+}
+
+&-profil3 {
+    margin-top: 0.5em;
+}
+
+}
+
+.header-profil:hover {
+    background-color: $couleurprincipal;
+    box-shadow: 2px 5px 5px rgb(0, 0, 0);
+    cursor: grab;
+}
+
+//-----------------------------------------------Icone-------------------------------------------------
+.section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 4em;
+    font-family: $font;
+    cursor: grab;
+
+    &-image {
+        @include image ();
+    }
+
+    &-image2 {
+        border: solid $couleurgrise 1px;
+        border-radius: 1em;
+        width: 6em;
+        @include display-just-center ();
+        margin-bottom: 1em;
+
+    }
+}
+
+.section-image2:hover {
+    background-color: $couleurprincipal;
+    box-shadow: 2px 5px 5px rgb(0, 0, 0);}
+
+.section-image:hover {
+    font-size: 1.1rem;
+    transition: 1s;
+    cursor: grab;
+}
+//--------------------------------------carousel-----------------------------------------------------------
+.Container-carousel {
+    display: flex;
+    position: relative;
+}
+//-----------------------------------------Carousel1------------------------------------------------------
+
+.carrousel {
+    display: flex;
+    position: relative;
+    margin-left: 2em;
+    
+    
+    [name~="carrousel"] {
+        display: none;
+
+    &:checked {
+        + .slide {
+            pointer-events: auto;
+            opacity: 1;
+            .slide-content {
+            opacity: 1;
+            }
+        }
+    }
+}
+    
+    .slide {
+        @include carrousel1();
+        margin-left: 2em;
+    }
+
+    .IMG {
+        width: 20em;
+        border-radius: 1em;
+
+    }    
+    
+    .back,
+    .forward {
+        @include ccarrousel2();
+
+    &:hover {
+        transform: scale(1);
+        background-color: white;
+        cursor: grab;
+        }
+    }
+    
+    .back {
+        left: calc(0% + 2rem);
+    }
+    
+    .forward {
+        right: calc(0% + 2rem);
+    }
+}
+
+
+    [carrousel] {
+        h1 {
+        font-size: 5rem;
+        color: white;
+        text-shadow: 0 3px 0 rgba(black, .2);
+        }
+    }
+
+//-----------------------------------------Carrousel2------------------------------------------------------
+
+    .test {
+        @include carrousel ();
+        
+        
+        [name~="test"] {
+            display: none;
+
+&:checked {
+    + .test1 {
+        pointer-events: auto;
+        opacity: 1;
+        .test1-content {
+        opacity: 1;
+        }
+    }
+}
+}
+
+.test1 {
+    @include carrousel1();
+    margin-left: 4em;
+}
+
+.IMG {
+    width: 20em;
+    border-radius: 1em;
+
+}    
+
+.back,
+.forward {
+    @include ccarrousel2();
+
+    &:hover {
+    transform: scale(1);
+    background-color: white;
+    cursor: grab;
+    }
+}
+
+.back {
+    left: calc(0% + 2rem);
+}
+
+.forward {
+    right: calc(0% + 2rem);
+}
+}
+
+
+
+[test] {
+    h1 {
+    font-size: 5rem;
+    color: white;
+    text-shadow: 0 3px 0 rgba(black, .2);
+    }
+
+    }
+
+    //-----------------------------------------Carrousel3------------------------------------------------------
+
+    
+    
+    .carrousels {
+        @include carrousel ();
+        margin-right: 2em;
+
+
+        [name~="carrousels"] {
+            display: none;
+    
+        &:checked {
+            + .slides {
+                pointer-events: auto;
+                opacity: 1;
+                .slides-content {
+                opacity: 1;
+                }
+            }
+        }
+    }
+        
+        .slides {
+            @include carrousel1();
+            margin-left: 6em;
+        }
+    
+        .IMG {
+            width: 20em;
+            border-radius: 1em;
+
+        }    
+        
+        .back,
+        .forward {
+            @include ccarrousel2();
+    
+            &:hover {
+            transform: scale(1);
+            background-color: white;
+            cursor: grab;
+            }
+        }
+        
+        .back {
+            left: calc(0% + 2rem);
+        }
+        
+        .forward {
+            right: calc(0% + 2rem);
+        }
+    }
+    
+    
+        [carrousels] {
+            h1 {
+            font-size: 5rem;
+            color: white;
+            text-shadow: 0 3px 0 rgba(black, .2);
+            }
+        }
+//-----------------------------------------Carrousel4------------------------------------------------------
+        
+        .ccarrousel {
+        @include carrousel ();
+
+            [name~="ccarrousel"] {
+                display: none;
+        
+            &:checked {
+                + .sslide {
+                    pointer-events: auto;
+                    opacity: 1;
+                    .sslide-content {
+                    opacity: 1;
+                    }
+                }
+            }
+        }
+            
+            .sslide {
+                @include carrousel1();
+                margin-left: 6em;
+                
+            }
+        
+            .IMG {
+                width: 20em;
+                border-radius: 1em;
+            }    
+            
+            .back,
+            .forward {
+                @include ccarrousel2();
+        
+                &:hover {
+                transform: scale(1);
+                background-color: white;
+                cursor: grab;
+                }
+            }
+            
+            .back {
+                left: calc(0% + 2rem);
+            }
+            
+            .forward {
+                right: calc(0% + 2rem);
+            }
+        }
+        
+        
+            [ccarrousel] {
+                h1 {
+                font-size: 5rem;
+                color: white;
+                text-shadow: 0 3px 0 rgba(black, .2);
+                }
+            }
+
+//--------------------------------------------Carrousel5---------------------------------------------------
+            .carrouselss {
+                display: flex;
+                position: relative;
+                margin-left: 2em;
+                
+                
+                [name~="carrouselss"] {
+                    display: none;
+            
+                &:checked {
+                    + .slidess {
+                        pointer-events: auto;
+                        opacity: 1;
+                        .slidess-content {
+                        opacity: 1;
+                        }
+                    }
+                }
+            }
+                
+                .slidess {
+                    @include carrousel1();
+                    margin-left: 2em;
+                }
+            
+                .IMG {
+                    width: 20em;
+                    border-radius: 1em;
+
+                }    
+                
+                .back,
+                .forward {
+                    @include ccarrousel2();
+            
+                    &:hover {
+                    transform: scale(1);
+                    background-color: white;
+                    cursor: grab;
+                    }
+                }
+                
+                .back {
+                    left: calc(0% + 2rem);
+                }
+                
+                .forward {
+                    right: calc(0% + 2rem);
+                }
+            }
+            
+            
+                [carrouselss] {
+                    h1 {
+                    font-size: 5rem;
+                    color: white;
+                    text-shadow: 0 3px 0 rgba(black, .2);
+                    }
+                }
+
+//-----------------------------------------------Carrousel6------------------------------------------------
+
+.testt {
+    @include carrousel ();
+
+    [name~="testt"] {
+        display: none;
+
+&:checked {
++ .testt1 {
+    pointer-events: auto;
+    opacity: 1;
+    .testt1-content {
+    opacity: 1;
+    }
+}
+}
+}
+
+.testt1 {
+    @include carrousel1();
+margin-left: 4em;
+}
+
+.IMG {
+width: 20em;
+border-radius: 1em;
+
+}    
+
+.back,
+.forward {
+    @include ccarrousel2();
+
+&:hover {
+transform: scale(1);
+background-color: white;
+cursor: grab;
+}
+}
+
+.back {
+left: calc(0% + 2rem);
+}
+
+.forward {
+right: calc(0% + 2rem);
+}
+}
+
+[testt] {
+h1 {
+font-size: 5rem;
+color: white;
+text-shadow: 0 3px 0 rgba(black, .2);
+}
+
+}
+
+//------------------------------------------------Carrousel7-----------------------------------------------
+
+    
+.carrrousels {
+    @include carrousel ();
+    margin-right: 2em;
+    
+    [name~="carrrousels"] {
+        display: none;
+
+    &:checked {
+        + .sliides {
+            pointer-events: auto;
+            opacity: 1;
+            .sliides-content {
+            opacity: 1;
+            }
+        }
+    }
+}
+    
+    .sliides {
+        @include carrousel1();
+        margin-left: 6em;
+    }
+
+    .IMG {
+        width: 20em;
+        border-radius: 1em;
+
+    }    
+    
+    .back,
+    .forward {
+        @include ccarrousel2();
+
+        &:hover {
+        transform: scale(1);
+        background-color: white;
+        cursor: grab;
+        }
+    }
+    
+    .back {
+        left: calc(0% + 2rem);
+    }
+    
+    .forward {
+        right: calc(0% + 2rem);
+    }
+}
+
+
+    [carrrousels] {
+        h1 {
+        font-size: 5rem;
+        color: white;
+        text-shadow: 0 3px 0 rgba(black, .2);
+        }
+    }
+//------------------------------------------------Carrousel8------------------------------------------------
+.ccarrousels {
+    @include carrousel ();
+    
+    [name~="ccarrousels"] {
+        display: none;
+
+    &:checked {
+        + .sslides {
+            pointer-events: auto;
+            opacity: 1;
+            .sslides-content {
+            opacity: 1;
+            }
+        }
+    }
+}
+    
+    .sslides {
+        @include carrousel1();
+        margin-left: 6em;
+    }
+
+    .IMG {
+        width: 20em;
+        border-radius: 1em;
+
+    }    
+    
+    .back,
+    .forward {
+        @include ccarrousel2();
+
+        &:hover {
+        transform: scale(1);
+        background-color: white;
+        cursor: grab;
+        }
+    }
+    
+    .back {
+        left: calc(0% + 2rem);
+    }
+    
+    .forward {
+        right: calc(0% + 2rem);
+    }
+}
+
+
+    [ccarrousels] {
+        h1 {
+        font-size: 5rem;
+        color: white;
+        text-shadow: 0 3px 0 rgba(black, .2);
+        }
+    }
+
+
+ //---------------------------------------------Texte-sous-carrousel----------------------------------------       
+.texte {
+    display: flex;
+    margin-left: 9.5em;
+    margin-top: 11em;
+    line-height: 0.5em;
+    margin-bottom: 4em;
+
+
+
+    &-1 {
+        margin-left: 15em;
+
+    }
+
+    &-2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-3 {
+        font-size: 0.8rem;
+    }
+}      
+    
+//---------------------------------------------Footer-----------------------------------------------------
+
+.footer {
+    color: #ff5a5f;
+    font-family: $font;
+    font-size: 2em;
+
+    &-nom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 1em;
+        margin-left: 1em;
+    }
+
+    &-prenom {
+        text-align: left;
+    }
+
+    &-date {
+        text-align: right;
+    
+    }
+        
+}
