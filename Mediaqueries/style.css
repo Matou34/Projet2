@@ -1,0 +1,835 @@
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Dancing Script", cursive;
+  border: solid #d5d4d4 2px;
+  height: 8em;
+}
+.header-logo {
+  display: flex;
+  width: 5em;
+  height: 2.5em;
+  margin-left: 7em;
+}
+.header-nav {
+  display: flex;
+  border: solid #d5d4d4 2px;
+  border-radius: 10em;
+  width: 28em;
+  height: 3em;
+}
+.header-nav1 {
+  display: flex;
+  justify-content: center;
+  border-right: solid #d5d4d4 2px;
+  width: 7em;
+}
+.header-nav2 {
+  display: flex;
+  justify-content: center;
+  width: 11em;
+  color: #d5d4d4;
+}
+.header-nav3 {
+  display: flex;
+  align-items: center;
+  background-color: #ff5a5f;
+  border-radius: 22em;
+  padding: 1em;
+}
+.header-mmlsa {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-left: 3em;
+}
+.header-mmlsa2 {
+  margin-left: 1em;
+}
+.header .header-mlsa:hover {
+  background-color: rgba(255, 90, 96, 0.7568627451);
+  box-shadow: 2px 5px 5px rgb(0, 0, 0);
+  cursor: grab;
+  border-radius: 10em;
+}
+.header .header-mmlsa2:hover {
+  font-size: 1.5em;
+  cursor: grab;
+}
+.header .header-nav3:hover {
+  cursor: grab;
+  box-shadow: 2px 5px 5px rgb(0, 0, 0);
+}
+.header .header-nav1, .header .header-nav2:hover {
+  cursor: grab;
+}
+.header-profil {
+  display: flex;
+  border: solid #d5d4d4 2px;
+  border-radius: 29px;
+  width: 5em;
+  height: 3em;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 2em;
+}
+.header-profil2 {
+  border-bottom: solid black 1px;
+  width: 1em;
+  margin-top: 0.4em;
+}
+.header-profil3 {
+  margin-top: 0.5em;
+}
+
+.header-profil:hover {
+  background-color: #ff5a5f;
+  box-shadow: 2px 5px 5px rgb(0, 0, 0);
+  cursor: grab;
+}
+
+.section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 4em;
+  font-family: "Dancing Script", cursive;
+  cursor: grab;
+}
+.section-image {
+  text-align: center;
+}
+.section-image2 {
+  border: solid #d5d4d4 1px;
+  border-radius: 1em;
+  width: 6em;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.section-image2:hover {
+  background-color: #ff5a5f;
+  box-shadow: 2px 5px 5px rgb(0, 0, 0);
+}
+
+.section-image:hover {
+  font-size: 1.1rem;
+  transition: 1s;
+  cursor: grab;
+}
+
+.Container-carousel {
+  display: flex;
+  position: relative;
+}
+
+.carrousel {
+  display: flex;
+  position: relative;
+  margin-left: 2em;
+}
+.carrousel [name~=carrousel] {
+  display: none;
+}
+.carrousel [name~=carrousel]:checked + .slide {
+  pointer-events: auto;
+  opacity: 1;
+}
+.carrousel [name~=carrousel]:checked + .slide .slide-content {
+  opacity: 1;
+}
+.carrousel .slide {
+  position: absolute;
+  left: 10em;
+  width: 10em;
+  height: 10em;
+  pointer-events: none;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2em;
+}
+.carrousel .IMG {
+  width: 20em;
+  border-radius: 1em;
+}
+.carrousel .back,
+.carrousel .forward {
+  display: block;
+  position: relative;
+  top: calc(50% - 4rem);
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.7254901961);
+  border-radius: 100px;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+  transform: scale(0.9);
+  transition: transform 0.2s;
+}
+.carrousel .back:hover,
+.carrousel .forward:hover {
+  transform: scale(1);
+  background-color: white;
+  cursor: grab;
+}
+.carrousel .back {
+  left: calc(0% + 2rem);
+}
+.carrousel .forward {
+  right: calc(0% + 2rem);
+}
+
+[carrousel] h1 {
+  font-size: 5rem;
+  color: white;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.test {
+  display: flex;
+  position: relative;
+  border-radius: 10px;
+  margin-left: 20em;
+}
+.test [name~=test] {
+  display: none;
+}
+.test [name~=test]:checked + .test1 {
+  pointer-events: auto;
+  opacity: 1;
+}
+.test [name~=test]:checked + .test1 .test1-content {
+  opacity: 1;
+}
+.test .test1 {
+  position: absolute;
+  left: 10em;
+  width: 10em;
+  height: 10em;
+  pointer-events: none;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4em;
+}
+.test .IMG {
+  width: 20em;
+  border-radius: 1em;
+}
+.test .back,
+.test .forward {
+  display: block;
+  position: relative;
+  top: calc(50% - 4rem);
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.7254901961);
+  border-radius: 100px;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+  transform: scale(0.9);
+  transition: transform 0.2s;
+}
+.test .back:hover,
+.test .forward:hover {
+  transform: scale(1);
+  background-color: white;
+  cursor: grab;
+}
+.test .back {
+  left: calc(0% + 2rem);
+}
+.test .forward {
+  right: calc(0% + 2rem);
+}
+
+[test] h1 {
+  font-size: 5rem;
+  color: white;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.carrousels {
+  display: flex;
+  position: relative;
+  border-radius: 10px;
+  margin-left: 20em;
+  margin-right: 2em;
+}
+.carrousels [name~=carrousels] {
+  display: none;
+}
+.carrousels [name~=carrousels]:checked + .slides {
+  pointer-events: auto;
+  opacity: 1;
+}
+.carrousels [name~=carrousels]:checked + .slides .slides-content {
+  opacity: 1;
+}
+.carrousels .slides {
+  position: absolute;
+  left: 10em;
+  width: 10em;
+  height: 10em;
+  pointer-events: none;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 6em;
+}
+.carrousels .IMG {
+  width: 20em;
+  border-radius: 1em;
+}
+.carrousels .back,
+.carrousels .forward {
+  display: block;
+  position: relative;
+  top: calc(50% - 4rem);
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.7254901961);
+  border-radius: 100px;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+  transform: scale(0.9);
+  transition: transform 0.2s;
+}
+.carrousels .back:hover,
+.carrousels .forward:hover {
+  transform: scale(1);
+  background-color: white;
+  cursor: grab;
+}
+.carrousels .back {
+  left: calc(0% + 2rem);
+}
+.carrousels .forward {
+  right: calc(0% + 2rem);
+}
+
+[carrousels] h1 {
+  font-size: 5rem;
+  color: white;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.ccarrousel {
+  display: flex;
+  position: relative;
+  border-radius: 10px;
+  margin-left: 20em;
+}
+.ccarrousel [name~=ccarrousel] {
+  display: none;
+}
+.ccarrousel [name~=ccarrousel]:checked + .sslide {
+  pointer-events: auto;
+  opacity: 1;
+}
+.ccarrousel [name~=ccarrousel]:checked + .sslide .sslide-content {
+  opacity: 1;
+}
+.ccarrousel .sslide {
+  position: absolute;
+  left: 10em;
+  width: 10em;
+  height: 10em;
+  pointer-events: none;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 6em;
+}
+.ccarrousel .IMG {
+  width: 20em;
+  border-radius: 1em;
+}
+.ccarrousel .back,
+.ccarrousel .forward {
+  display: block;
+  position: relative;
+  top: calc(50% - 4rem);
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.7254901961);
+  border-radius: 100px;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+  transform: scale(0.9);
+  transition: transform 0.2s;
+}
+.ccarrousel .back:hover,
+.ccarrousel .forward:hover {
+  transform: scale(1);
+  background-color: white;
+  cursor: grab;
+}
+.ccarrousel .back {
+  left: calc(0% + 2rem);
+}
+.ccarrousel .forward {
+  right: calc(0% + 2rem);
+}
+
+[ccarrousel] h1 {
+  font-size: 5rem;
+  color: white;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.carrouselss {
+  display: flex;
+  position: relative;
+  margin-left: 2em;
+}
+.carrouselss [name~=carrouselss] {
+  display: none;
+}
+.carrouselss [name~=carrouselss]:checked + .slidess {
+  pointer-events: auto;
+  opacity: 1;
+}
+.carrouselss [name~=carrouselss]:checked + .slidess .slidess-content {
+  opacity: 1;
+}
+.carrouselss .slidess {
+  position: absolute;
+  left: 10em;
+  width: 10em;
+  height: 10em;
+  pointer-events: none;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2em;
+}
+.carrouselss .IMG {
+  width: 20em;
+  border-radius: 1em;
+}
+.carrouselss .back,
+.carrouselss .forward {
+  display: block;
+  position: relative;
+  top: calc(50% - 4rem);
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.7254901961);
+  border-radius: 100px;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+  transform: scale(0.9);
+  transition: transform 0.2s;
+}
+.carrouselss .back:hover,
+.carrouselss .forward:hover {
+  transform: scale(1);
+  background-color: white;
+  cursor: grab;
+}
+.carrouselss .back {
+  left: calc(0% + 2rem);
+}
+.carrouselss .forward {
+  right: calc(0% + 2rem);
+}
+
+[carrouselss] h1 {
+  font-size: 5rem;
+  color: white;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.testt {
+  display: flex;
+  position: relative;
+  border-radius: 10px;
+  margin-left: 20em;
+}
+.testt [name~=testt] {
+  display: none;
+}
+.testt [name~=testt]:checked + .testt1 {
+  pointer-events: auto;
+  opacity: 1;
+}
+.testt [name~=testt]:checked + .testt1 .testt1-content {
+  opacity: 1;
+}
+.testt .testt1 {
+  position: absolute;
+  left: 10em;
+  width: 10em;
+  height: 10em;
+  pointer-events: none;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4em;
+}
+.testt .IMG {
+  width: 20em;
+  border-radius: 1em;
+}
+.testt .back,
+.testt .forward {
+  display: block;
+  position: relative;
+  top: calc(50% - 4rem);
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.7254901961);
+  border-radius: 100px;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+  transform: scale(0.9);
+  transition: transform 0.2s;
+}
+.testt .back:hover,
+.testt .forward:hover {
+  transform: scale(1);
+  background-color: white;
+  cursor: grab;
+}
+.testt .back {
+  left: calc(0% + 2rem);
+}
+.testt .forward {
+  right: calc(0% + 2rem);
+}
+
+[testt] h1 {
+  font-size: 5rem;
+  color: white;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.carrrousels {
+  display: flex;
+  position: relative;
+  border-radius: 10px;
+  margin-left: 20em;
+  margin-right: 2em;
+}
+.carrrousels [name~=carrrousels] {
+  display: none;
+}
+.carrrousels [name~=carrrousels]:checked + .sliides {
+  pointer-events: auto;
+  opacity: 1;
+}
+.carrrousels [name~=carrrousels]:checked + .sliides .sliides-content {
+  opacity: 1;
+}
+.carrrousels .sliides {
+  position: absolute;
+  left: 10em;
+  width: 10em;
+  height: 10em;
+  pointer-events: none;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 6em;
+}
+.carrrousels .IMG {
+  width: 20em;
+  border-radius: 1em;
+}
+.carrrousels .back,
+.carrrousels .forward {
+  display: block;
+  position: relative;
+  top: calc(50% - 4rem);
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.7254901961);
+  border-radius: 100px;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+  transform: scale(0.9);
+  transition: transform 0.2s;
+}
+.carrrousels .back:hover,
+.carrrousels .forward:hover {
+  transform: scale(1);
+  background-color: white;
+  cursor: grab;
+}
+.carrrousels .back {
+  left: calc(0% + 2rem);
+}
+.carrrousels .forward {
+  right: calc(0% + 2rem);
+}
+
+[carrrousels] h1 {
+  font-size: 5rem;
+  color: white;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.ccarrousels {
+  display: flex;
+  position: relative;
+  border-radius: 10px;
+  margin-left: 20em;
+}
+.ccarrousels [name~=ccarrousels] {
+  display: none;
+}
+.ccarrousels [name~=ccarrousels]:checked + .sslides {
+  pointer-events: auto;
+  opacity: 1;
+}
+.ccarrousels [name~=ccarrousels]:checked + .sslides .sslides-content {
+  opacity: 1;
+}
+.ccarrousels .sslides {
+  position: absolute;
+  left: 10em;
+  width: 10em;
+  height: 10em;
+  pointer-events: none;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 6em;
+}
+.ccarrousels .IMG {
+  width: 20em;
+  border-radius: 1em;
+}
+.ccarrousels .back,
+.ccarrousels .forward {
+  display: block;
+  position: relative;
+  top: calc(50% - 4rem);
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.7254901961);
+  border-radius: 100px;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+  transform: scale(0.9);
+  transition: transform 0.2s;
+}
+.ccarrousels .back:hover,
+.ccarrousels .forward:hover {
+  transform: scale(1);
+  background-color: white;
+  cursor: grab;
+}
+.ccarrousels .back {
+  left: calc(0% + 2rem);
+}
+.ccarrousels .forward {
+  right: calc(0% + 2rem);
+}
+
+[ccarrousels] h1 {
+  font-size: 5rem;
+  color: white;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.texte {
+  display: flex;
+  margin-left: 9.5em;
+  margin-top: 11em;
+  line-height: 0.5em;
+  margin-bottom: 4em;
+}
+.texte-1 {
+  margin-left: 15em;
+}
+.texte-2 {
+  display: flex;
+  flex-direction: column;
+}
+.texte-3 {
+  font-size: 0.8rem;
+}
+
+.footer {
+  color: #ff5a5f;
+  font-family: "Dancing Script", cursive;
+  font-size: 2em;
+}
+.footer-nom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+.footer-prenom {
+  text-align: left;
+}
+.footer-date {
+  text-align: right;
+}
+
+.containerimg {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    margin-top: 1em;
+  }
+  .header-logo2 {
+    display: none;
+  }
+  .header-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 8em;
+    height: 7em;
+    border: none;
+    line-height: 0.5em;
+  }
+  .header-nav1 {
+    border-right: none;
+    font-size: 1.7em;
+  }
+  .header-nav1:hover {
+    background-color: #ff5a5f;
+    border-radius: 10em;
+  }
+  .header-nav2:hover {
+    background-color: #ff5a5f;
+    border-radius: 10em;
+  }
+  .header-nav2 {
+    font-size: 1.7em;
+    color: black;
+  }
+  .header-mlsa {
+    display: none;
+  }
+  .header-mmlsa2 {
+    display: none;
+  }
+  .header-profil {
+    display: none;
+  }
+  .section-resp {
+    display: none;
+  }
+  .section-image2 {
+    display: none;
+  }
+  .section {
+    margin-top: 14em;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.7em;
+  }
+  .carrousel {
+    display: none;
+  }
+  .carrouselss {
+    display: none;
+  }
+  .ccarrousels {
+    display: none;
+  }
+  .carrrousels {
+    display: none;
+  }
+  .testt {
+    display: none;
+  }
+  .test {
+    display: none;
+  }
+  .ccarrousel {
+    display: none;
+  }
+  .carrousels {
+    display: none;
+  }
+  .texte {
+    display: none;
+  }
+  .containerimg {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  img {
+    width: 20em;
+  }
+  .footer-nom {
+    font-size: 0.5em;
+  }
+}/*# sourceMappingURL=style.css.map */
