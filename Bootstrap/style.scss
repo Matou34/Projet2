@@ -1,0 +1,29 @@
+@import "node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+.rounded-circle {
+    background-color: #ff5a5f;
+    width: 3em;
+    height: 3em;
+}
+
+
+.dropdown {
+    margin-right: 7em;
+    margin-left: 1em;
+}
+
+.card-text {
+    font-size: 0.6rem;
+}
+
+p {
+    font-size: 0.7rem;
+}
+
+.text-center:hover {
+    font-size: 1.5rem;
+}
+
+.carousel-item   {
+    margin-left: 3em;
+}
